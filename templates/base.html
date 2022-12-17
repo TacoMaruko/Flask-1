@@ -12,17 +12,21 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">5G 新時代</a>
+            <a class="navbar-brand" href="{{url_for('home')}}">5G 新時代</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link {% if title=='5G 新時代' %} active {% endif %}" aria-current="page"
+                        href="#">Home</a>
+                    <a class="nav-link {% if title=='Features' %} active {% endif %}"
+                        href="{{url_for('item1')}}">Features</a>
+                    <a class="nav-link {% if title=='Pricing' %} active {% endif %}"
+                        href="{{url_for('item2')}}">Pricing</a>
+                    <a class="nav-link {% if title=='Dashboard' %} active {% endif %}"
+                        href="{{url_for('item3')}}">Dashboard</a>
                 </div>
             </div>
         </div>
