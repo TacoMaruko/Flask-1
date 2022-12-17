@@ -6,6 +6,18 @@
 <link rel="stylesheet" href="{{url_for('static',filename='css/item2.css')}}">
 {% endblock %}
 
+{% block content %}
+<div class="col-lg-6 mx-auto">
+    <p class="fs-5 mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
+        popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
+        prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Custom button</button>
+        <button type="button" class="btn btn-outline-light btn-lg px-4">Secondary</button>
+    </div>
+</div>
+{% endblock %}
+
 {% block javascript%}
 <script src="{{url_for('static',filename='js/item2.js')}}"></script>
 {% endblock %}

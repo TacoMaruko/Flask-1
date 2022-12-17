@@ -30,19 +30,31 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home.html", title="5G 新時代")
+    context = {
+        "title":"5G 新時代"
+    }
+    return render_template("home.html", **context)
 
 
 @app.route("/item1")
 def item1():
-    return render_template("item1.html", title="Features")
+    context = {
+        "title":"Features"
+    }
+    return render_template("item1.html", **context)
 
 
 @app.route("/item2")
 def item2():
-    return render_template("item2.html", title="Pricing")
+    context = {
+        "title":"Pricing"
+    }
+    return render_template("item2.html", **context)
 
 
 @app.route("/item3")
 def item3():
-    return render_template("item3.html", title="Dashboard")
+    context = {
+        "title":"Dashboard"
+    }
+    return render_template("item3.html", **context)
