@@ -47,7 +47,10 @@ def item1():
 @app.route("/item2")
 def item2():
     context = {
-        "title":"Pricing"
+        "title":"Pricing",
+        "banners":["第一段文字；第一段文字；第一段文字；第一段文字；第一段文字",
+        "第2段；第2段；第2段；第2段；第2段",
+        "Final；Final；Final；Final；Final；Final"]
     }
     return render_template("item2.html", **context)
 
